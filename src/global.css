@@ -1,0 +1,53 @@
+body {
+  font-family: "Comfortaa", sans-serif;
+  background: #f9fafb;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+a.button {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.button:hover {
+  opacity: 0.8;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+.actions .button {
+  font-size: 0.8rem;
+}
+.button.back {
+  background: #0077ff;
+  color: #fff;
+}
+.button.edit {
+  background: #ffb100;
+  color: #fff;
+}
+.button.delete {
+  background: #e63946;
+  color: #fff;
+}
+.button.new {
+  background: #0077ff;
+  color: #fff;
+}

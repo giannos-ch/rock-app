@@ -1,0 +1,55 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-group input[type="text"] {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.2s;
+}
+
+.form-group input[type="text"]:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+form .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+form .actions button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form .save {
+  background: #0077ff;
+  color: #fff;
+}
+form .save:hover {
+  background: #005fcc;
+}
+
+form .cancel {
+  background: #e5e7eb;
+  color: #333;
+}
+form .cancel:hover {
+  background: #d1d5db;
+}
