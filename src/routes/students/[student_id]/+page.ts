@@ -6,11 +6,13 @@ export const load = async ({ params }) => {
   const document = await getDoc(
     doc(collection(db, "students"), params.student_id)
   );
+  const student = new Student(
+    document.id,
+    document.data()?.name,
+    document.data()?.telephone
+  );
   return {
-    student: new Student(
-      document.id,
-      document.data()?.name,
-      document.data()?.telephone
-    ),
+    student: student,
+    classes: await student.classes(),
   };
 };
