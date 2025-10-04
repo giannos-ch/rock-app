@@ -6,7 +6,9 @@ export const load = async ({ params }) => {
   const document = await getDoc(
     doc(collection(db, "classes"), params.class_id)
   );
+  const klass = new Klass(document.id, document.data()?.name);
   return {
-    klass: new Klass(document.id, document.data()?.name),
+    klass: klass,
+    students: await klass.students(),
   };
 };

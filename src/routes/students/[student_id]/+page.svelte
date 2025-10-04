@@ -4,6 +4,7 @@
   import { collection, doc, deleteDoc } from "firebase/firestore";
   import { db } from "$lib/firebase";
   import { onMount } from "svelte";
+  import List from "../../../components/List.svelte";
 
   let { data }: PageProps = $props();
 
@@ -30,4 +31,6 @@
     <a class="button edit" href="/students/{data.student.id}/edit">Edit</a>
     <a class="button delete" href={null} onclick={deleteStudent}>Delete</a>
   </div>
+  <h2>Τμήματα</h2>
+  <List objects={data.classes} url="/classes/" has_new={false} />
 </div>
