@@ -28,4 +28,13 @@
   <Collapsible header_text="Μαθητές">
     <List objects={data.students} url="/students/" has_new={false} />
   </Collapsible>
+  <Collapsible header_text="Μαθήματα">
+    <List objects={[]} url="/subjects/" />
+  </Collapsible>
 </div>
+
+<style>
+  .actions {
+    margin-bottom: 1em;
+  }
+</style>

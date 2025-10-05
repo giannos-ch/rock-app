@@ -10,5 +10,6 @@ export const load = async ({ params }) => {
   return {
     klass: klass,
     students: await klass.students(),
+    // subjects: await klass.subjects(),
   };
 };

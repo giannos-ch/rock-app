@@ -42,4 +42,14 @@ export default class Klass {
       )
       .sort((a, b) => a.name.localeCompare(b.name));
   }
+
+  async subjects() {
+    //   const subjects = await getDocs(
+    //     query(collection(db, "subjects"), where("class_id", "==", this.id))
+    //   );
+    //   return subjects.docs
+    //     .map((doc: any) => new Subject())
+    //     .sort((a, b) => a.localeCompare(b));
+    return [];
+  }
 }

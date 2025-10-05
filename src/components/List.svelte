@@ -1,8 +1,11 @@
 <script lang="ts">
   import "./list_style.css";
 
-  let { has_new = true, objects, url } = $props();
+  let { has_new = true, objects, url, new_url = null } = $props();
   let search = $state("");
+  if (!new_url) {
+    new_url = url + "new";
+  }
 </script>
 
 <header class="list-header">
@@ -13,7 +16,7 @@
     bind:value={search}
   />
   {#if has_new}
-    <a class="button new" href={url + "new"}>+</a>
+    <a class="button new" href={new_url}>+</a>
   {/if}
 </header>
 
